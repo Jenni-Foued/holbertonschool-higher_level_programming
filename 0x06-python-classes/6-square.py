@@ -25,16 +25,14 @@ class Square:
     def size(self):
         """getter of __size
         Returns:
-            The size of the square
-        """
+            The size of the square"""
         return self.__size
 
     @size.setter
     def size(self, value):
         """setter of __size
         Args:
-            value (int): the size of a size of the square
-        """
+            value (int): the size of a size of the square"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -60,8 +58,7 @@ class Square:
     def position(self):
         """getter of __position
         Returns:
-            The position of the square
-        """
+            The position of the square"""
         return self.__position
 
     @position.setter
@@ -69,12 +66,16 @@ class Square:
         """setter of __position
         Args:
             value (tuple): position of the square"""
-        if type(value) is not tuple or \
-           len(value) != 2 or \
-           type(value[0]) is not int or \
-           value[0] < 0 or \
-           type(value[1]) is not int or \
-           value[1] < 0:
+        if type(value) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value[0]) is not int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value[1]) is not int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
