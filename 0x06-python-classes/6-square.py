@@ -46,11 +46,9 @@ class Square:
             for pos1 in range(self.__position[1]):
                 print()
             for column in range(self.__size):
-                for pos0 in range(self.__position[0]):
-                    print(' ', end="")
-                for row in range(self.__size):
-                    print('#', end="")
-                print()
+                print("".join([" " for j in range(self.__position[0])]),
+                      end="")
+                print("".join(["#" for row in range(self.__size)]))
         else:
             print()
 
