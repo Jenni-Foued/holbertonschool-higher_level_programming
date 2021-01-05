@@ -5,7 +5,8 @@
 class Square:
     """Class Square
     Attributes:
-        __size (int): size of a side of the square"""
+        __size (int): size of a side of the square
+        __position (tuple): position of the square"""
     def __init__(self, size=0, position=(0, 0)):
         """Initializes square's size
         Args:
@@ -29,17 +30,17 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, new_size):
+    def size(self, value):
         """setter of __size
         Args:
-            new_size (int): the size of a size of the square
+            value (int): the size of a size of the square
         """
-        if type(new_size) is not int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif new_size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = new_size
+            self.__size = value
 
     def my_print(self):
         """Prints in stdout the square with the character #"""
