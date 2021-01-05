@@ -41,27 +41,6 @@ class Square:
         else:
             self.__size = new_size
 
-    @property
-    def size(self):
-        """getter of __size
-        Returns:
-            The size of the square
-        """
-        return self.__size
-
-    @size.setter
-    def size(self, new_size):
-        """setter of __size
-        Args:
-            new_size (int): the size of a size of the square
-        """
-        if type(new_size) is not int:
-            raise TypeError("size must be an integer")
-        elif new_size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = new_size
-
     def my_print(self):
         """Prints in stdout the square with the character #"""
         if self.__size > 0:
