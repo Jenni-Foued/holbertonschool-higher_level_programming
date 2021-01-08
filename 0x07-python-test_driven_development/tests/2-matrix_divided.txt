@@ -1,0 +1,15 @@
+================================
+Module '2-matrix_divided'
+----------------------------
+Test import module
+    >>>matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Checking for module docstring:
+	>>> module = __import__("2-matrix_divided").__doc__
+	>>> len(m) > 1
+	True
+
+Checking for function docstring:
+	>>> function = __import__("2-matrix_divided").matrix_divided.__doc__
+    >>> len(f) > 1
+    True

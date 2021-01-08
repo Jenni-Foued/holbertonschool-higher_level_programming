@@ -38,11 +38,11 @@ Test not integer/float add_integer
     TypeError: a must be an integer
 
 Test for module docstring:
-	>>> m = __import__("0-add_integer").__doc__
+	>>> module = __import__("0-add_integer").__doc__
 	>>> len(m) > 1
 	True
 
 Test for function docstring:
-	>>> f = __import__("0-add_integer").add_integer.__doc__
+	>>> function = __import__("0-add_integer").add_integer.__doc__
     >>> len(f) > 1
     True
