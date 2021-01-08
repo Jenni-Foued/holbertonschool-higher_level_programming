@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Add module
+"0-add_integer" module
 
 This module supplies one function, add_integer(): it adds to numbers
 """
 
 def add_integer(a, b=98):
     """
-        Sum of a and b
+        Adds 2 integers.
 
         Args:
             a (int/float): first number
