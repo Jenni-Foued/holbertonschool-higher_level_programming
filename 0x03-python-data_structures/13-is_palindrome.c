@@ -52,8 +52,12 @@ int is_palindrome(listint_t **head)
 	for (i = 0; i < len; i++)
 	{
 		if (reversed_list[i] != temp->n)
+		{
 			return (0);
+			free(reversed_list);
+		}
 		temp = temp->next;
 	}
+	free(reversed_list);
 	return (1);
 }
