@@ -40,16 +40,16 @@ int is_palindrome(listint_t **head)
 	temp = *head;
 	len = list_len(temp);
 
-	reversed_list = malloc(sizeof(int) * len);
+	reversed_list = malloc(sizeof(int) * (len / 2));
 	temp = *head;
-	i = len - 1;
+	i = (len / 2) -1;
 	for (; i >= 0; i--)
 	{
 		reversed_list[i] = temp->n;
 		temp = temp->next;
 	}
 	temp = *head;
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len / 2; i++)
 	{
 		if (reversed_list[i] != temp->n)
 		{
