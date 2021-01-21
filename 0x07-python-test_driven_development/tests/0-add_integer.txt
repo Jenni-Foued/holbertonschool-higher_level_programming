@@ -19,7 +19,7 @@ Test 2 negative integers add_integer
 
 Test 2 floats add_integer
     >>> add_integer(4.5, 2.1)
-    6.6
+    6
 
 Test with a single given number add_integer
     >>> add_integer(-29)
