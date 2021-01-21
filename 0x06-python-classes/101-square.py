@@ -77,3 +77,13 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
+    def __str__(self):
+        """String representation of a square
+        Returns:
+            Formatted string representation of the square"""
+        if self.size == 0:
+            return ""
+        string = "\n" * self.position[1] + \
+            (" " * self.position[0] + "#" * self.size + "\n") * self.size
+        return string[:-1]
