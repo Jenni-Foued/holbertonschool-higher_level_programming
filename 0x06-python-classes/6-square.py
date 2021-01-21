@@ -46,9 +46,11 @@ class Square:
             for pos1 in range(self.__position[1]):
                 print()
             for column in range(self.__size):
-                print("".join([" " for j in range(self.__position[0])]),
-                      end="")
-                print("".join(["#" for row in range(self.__size)]))
+                for pos0 in range(self.__position[0]):
+                    print(' ', end="")
+                for row in range(self.__size):
+                    print('#', end="")
+                print()
         else:
             print()
 
@@ -64,16 +66,9 @@ class Square:
         """setter of __position
         Args:
             value (tuple): position of the square"""
-        if type(value) is not tuple:
+        if type(value) is not tuple or len(value) != 2 or \
+           type(value[0]) is not int or value[0] < 0 or \
+           type(value[1]) is not int or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if type(value[0]) is not int:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if type(value[1]) is not int:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
+        else:
+            self.__position = value
