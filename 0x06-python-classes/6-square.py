@@ -4,6 +4,8 @@
 
 class Square:
     """Class Square
+
+
     Attributes:
         __size (int): size of a side of the square
         __position (tuple): position of the square"""
@@ -11,9 +13,12 @@ class Square:
         """Initializes square's size
         Args:
             size (int): size of a side of the square
-            position (tuple): position of the square"""
-        self.__size = size
-        self.__position = position
+            position (tuple): position of the square
+        Returns:
+            None
+            """
+        self.size = size
+        self.position = position
 
     def area(self):
         """Calculates the square's area
