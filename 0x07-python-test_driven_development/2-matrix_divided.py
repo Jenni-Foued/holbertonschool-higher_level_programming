@@ -38,4 +38,4 @@ integers/floats")
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    return [[round(elm / div, 2) for elm in sub_list] for l in matrix]
+    return [[round(elm / div, 2) for elm in sub_list] for sub_list in matrix]
