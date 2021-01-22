@@ -1,7 +1,7 @@
 ================================
 Module '2-matrix_divided'
 ----------------------------
-Test import module
+Test importing function from module
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 
