@@ -67,5 +67,4 @@ Test missing one argument:
 Test div = float(inf):
 	>>> matrix = [[6, 6], [6, 6]]
 	>>> matrix_divided(matrix, float('inf'))
-	 [[0.0], [0.0]]
-
+	[[0.0, 0.0], [0.0, 0.0]]
