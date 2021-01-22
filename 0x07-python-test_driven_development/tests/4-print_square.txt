@@ -1,0 +1,36 @@
+================================
+Module 'Print square'
+----------------------------
+Test importing function from the module
+    >>> print_square = __import__('4-print_square').print_square
+
+Test for module docstring:
+	>>> m = __import__("4-print_square").__doc__
+	>>> len(m) > 1
+	True
+
+Test for function docstring:
+	>>> f = __import__("4-print_square").print_square.__doc__
+    >>> len(f) > 1
+    True
+
+Test invalid argument type:
+    >>> print_square("69")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Test argument with a negative value:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Test argument is 0:
+    >>> print_square(0)
+
+Test argument is a negative float:
+    >>> print_square(-1.25)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
