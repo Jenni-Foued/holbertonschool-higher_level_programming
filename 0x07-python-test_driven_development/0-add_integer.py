@@ -2,7 +2,7 @@
 """
 "0-add_integer" module
 
-This module supplies one function, add_integer(): it adds to numbers
+This module supplies one function, add_integer(): it adds two numbers
 """
 
 
