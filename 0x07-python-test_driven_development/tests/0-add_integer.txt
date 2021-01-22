@@ -50,11 +50,11 @@ Test for function docstring:
 Test for float overflow:
 	>>> add_integer(0, float('inf'))
 	Traceback (most recent call last):
-	 ...
+	...
 	OverflowError: cannot convert float infinity to integer
 
 Test for passing float NaN:
 	>>> add_integer(1, float('nan'))
 	Traceback (most recent call last):
-	...
+    ...
 	ValueError: cannot convert float NaN to integer
