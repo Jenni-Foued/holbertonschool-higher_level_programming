@@ -64,3 +64,8 @@ Test missing one argument:
   	...
 	TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
+Test div = float(inf):
+	>>> matrix = [[6, 6], [6, 6]]
+	>>> matrix_divided(matrix, float('inf'))
+	 [[0.0], [0.0]]
+
