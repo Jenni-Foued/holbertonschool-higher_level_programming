@@ -23,9 +23,9 @@ def text_indentation(text):
     else:
         new_line = True
         for elm in range(0, len(text)):
-            if new_line == True and text[elm] == ' ':
+            if new_line is True and text[elm] == ' ':
                 print(end="")
-            elif text[elm] == '.' or text[elm] == '?':
+            elif text[elm] == '.' or text[elm] == '?' or text[elm] == ':':
                 print(text[elm] + "\n")
                 new_line = True
             else:
