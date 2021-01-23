@@ -34,6 +34,6 @@ Test blank line given as argument:
     >>> text_indentation("Text containing \n a blank line. \n and another one")
     Text containing 
      a blank line.
-
-
+    <BLANKLINE>
+    <BLANKLINE>
      and another one
