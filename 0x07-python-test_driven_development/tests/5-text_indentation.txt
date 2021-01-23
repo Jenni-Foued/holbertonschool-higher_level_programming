@@ -31,6 +31,6 @@ Test no argument given:
     TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 Test blank line given as argument:
-    >>> t = "\n"
-    >>> text_indentation(t)
-    <BLANKLINE>
+    >>> text_indentation("Text containing \n a blank line")
+    Text containing 
+     a blank line
