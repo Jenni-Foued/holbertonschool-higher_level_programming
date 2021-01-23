@@ -33,4 +33,4 @@ Test no argument given:
 Test blank line given as argument:
     >>> t = "\n"
     >>> text_indentation(t)
-
+    <BLANKLINE>
