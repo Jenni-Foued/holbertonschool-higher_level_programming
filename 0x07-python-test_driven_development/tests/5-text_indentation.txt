@@ -1,0 +1,25 @@
+==============================
+Module 'Text indention'
+------------------------------
+Test importing function from the module
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test for module docstring:
+	>>> m = __import__("5-text_indentation").__doc__
+	>>> len(m) > 1
+	True
+
+Test for function docstring:
+	>>> f = __import__("5-text_indentation").text_indentation.__doc__
+    >>> len(f) > 1
+    True
+
+Test invalid type argument:
+    >>> text_indentation(0)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test argument text that does not contain '.' or '?':
+    >>> text_indentation("simple text")
+    simple text
