@@ -52,7 +52,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_one_negative_number(self):
         """Tests for a negative number"""
         l = [-2, 0, 1]
-        self.assertEqual(max_integer(l), 2)
+        self.assertEqual(max_integer(l), 1)
 
 if __name__ == "__main__":
     unittest.main()
