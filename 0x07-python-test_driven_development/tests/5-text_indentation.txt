@@ -29,3 +29,7 @@ Test no argument given:
     Traceback (most recent call last):
     ...
     TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test blank line given as argument:
+    >>> text_indentation("")
+
