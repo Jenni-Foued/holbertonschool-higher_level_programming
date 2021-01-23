@@ -27,32 +27,32 @@ class TestMaxInteger(unittest.TestCase):
     def test_one_element_list(self):
         """Tests for a one element in the list"""
         l = [66]
-        self.assertTrue(max_integer(l), 66)
+        self.assertEqual(max_integer(l), 66)
 
     def test_max_middle(self):
         """Tests for maximum in the middle"""
         l = [1, 66, 9]
-        self.assertTrue(max_integer(l), 66)
+        self.assertEqual(max_integer(l), 66)
 
     def test_max_end(self):
         """Tests for maximum in the end"""
         l = [1, 6, 9]
-        self.assertTrue(max_integer(l), 9)
+        self.assertEqual(max_integer(l), 9)
 
     def test_max_begin(self):
         """Tests for maximum in the begin"""
         l = [66, 9, 1]
-        self.assertTrue(max_integer(l), 66)
+        self.assertEqual(max_integer(l), 66)
 
     def test_negative_numbers(self):
         """Tests for a negative number"""
         l = [-2, -6, -4]
-        self.assertTrue(max_integer(l), -2)
+        self.assertEqual(max_integer(l), -2)
 
     def test_one_negative_number(self):
         """Tests for a negative number"""
         l = [-2, 0, 1]
-        self.assertTrue(max_integer(l), 2)
+        self.assertEqual(max_integer(l), 2)
 
 if __name__ == "__main__":
     unittest.main()
