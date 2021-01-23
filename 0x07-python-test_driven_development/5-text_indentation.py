@@ -21,12 +21,13 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
     else:
-        eol = False
+        new_line = True
         for elm in range(0, len(text)):
-            if text[elm] == '.' or text[elm] == '?':
-                print (text[elm] + "\n")
-                eol = True
-            elif eol == False:
-                print(text[elm], end="")
+            if new_line == True and text[elm] == ' ':
+                print(end="")
+            elif text[elm] == '.' or text[elm] == '?':
+                print(text[elm] + "\n")
+                new_line = True
             else:
-                eol = False
+                print(text[elm], end="")
+                new_line = False
