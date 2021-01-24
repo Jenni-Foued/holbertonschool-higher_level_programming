@@ -42,5 +42,5 @@ class Rectangle:
         Args:
             width (int): width of the Rectangle
             height (int): height of the Rectangle"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
