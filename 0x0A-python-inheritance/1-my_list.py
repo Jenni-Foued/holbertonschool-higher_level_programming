@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-Defines  Mylist class
+Defines  MyList class
 """
 
 
-class Mylist(list):
+class MyList(list):
     """
     list subclass
     """
