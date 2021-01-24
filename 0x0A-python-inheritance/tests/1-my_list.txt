@@ -1,8 +1,8 @@
 ================================
-Module 'Mylist'
+Module 'MyList'
 ----------------------------
 Test importing function from the module
-    >>> Mylist = __import__('1-my_list').Mylist
+    >>> Mylist = __import__('1-my_list').MyList
 
 Test for module docstring:
 	>>> m = __import__("1-my_list").__doc__
@@ -10,12 +10,12 @@ Test for module docstring:
 	True
 
 Test for class docstring:
-	>>> c = __import__("1-my_list").Mylist.__doc__
+	>>> c = __import__("1-my_list").MyList.__doc__
     >>> len(c) > 1
     True
 
 Test for method docstring:
-	>>> me = __import__("1-my_list").Mylist.print_sorted.__doc__
+	>>> me = __import__("1-my_list").MyList.print_sorted.__doc__
 	>>> len(me) > 1
 	True
 
