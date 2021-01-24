@@ -39,3 +39,46 @@ Test for normal use (2 * list of lists of numbers):
     array([[19, 22,  5],
            [43, 50, 11],
            [43, 50, 11]])
+
+Test for uneven first argument:
+	>>> lazy_matrix_mul([[1, 2], [3, 4, 5]], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
+
+Test for uneven second argument:
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 32], [75, 5.55, 6.7]])
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
+
+Test for non numbers:
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [["hmm", "hi", "so"], ["az", "qw", "done"]])
+    Traceback (most recent call last):
+    ...
+    TypeError: invalid data type for einsum
+
+Test for empty first argument:
+    >>> lazy_matrix_mul([[]],[[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (1,0) and (2,2) not aligned: 0 (dim 1) != 2 (dim 0)
+
+Test for empty second argument:
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[]])
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (2,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
+
+Test invalid type first argument:
+    >>> lazy_matrix_mul("wrong" ,[[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    ValueError: Scalar operands are not allowed, use '*' instead
+
+Test invalid type second argument:
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], "NOOOOO!")
+    Traceback (most recent call last):
+    ...
+    ValueError: Scalar operands are not allowed, use '*' instead
+
