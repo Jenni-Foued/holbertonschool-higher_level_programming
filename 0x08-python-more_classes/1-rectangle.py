@@ -26,7 +26,7 @@ class Rectangle:
     def width(self, value):
         """setter of __width
         Args:
-            new_width (int): the width of the rectangle
+            value (int): the width of the rectangle
         """
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -43,7 +43,7 @@ class Rectangle:
     def height(self, value):
         """setter of __height
         Args:
-            new_height (int): the height of the rectangle
+            value (int): the height of the rectangle
         """
         if type(value) is not int:
             raise TypeError("height must be an integer")
