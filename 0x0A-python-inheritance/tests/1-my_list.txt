@@ -14,11 +14,11 @@ Test for class docstring:
     >>> len(c) > 1
     True
 
-Checking for method docstring:
+Test for method docstring:
 	>>> me = __import__("1-my_list").MyList.print_sorted.__doc__
 	>>> len(me) > 1
 	True
 
-Checking that MyList inherits from list:
+Test that MyList inherits from list:
 	>>> issubclass(MyList, list)
 	True
