@@ -2,7 +2,7 @@
 Module 'Mylist'
 ----------------------------
 Test importing function from the module
-    >>> my_list = __import__('1-my_list').Mylist
+    >>> Mylist = __import__('1-my_list').Mylist
 
 Test for module docstring:
 	>>> m = __import__("1-my_list").__doc__
@@ -15,10 +15,10 @@ Test for class docstring:
     True
 
 Test for method docstring:
-	>>> me = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> me = __import__("1-my_list").Mylist.print_sorted.__doc__
 	>>> len(me) > 1
 	True
 
 Test that MyList inherits from list:
-	>>> issubclass(MyList, list)
+	>>> issubclass(Mylist, list)
 	True
