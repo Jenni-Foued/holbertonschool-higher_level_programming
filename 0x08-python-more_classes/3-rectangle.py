@@ -69,4 +69,4 @@ class Rectangle:
             string = ""
         else:
             string = ("#" * self.__width + "\n") * self.__height
-        return string [:-1]
+        return string[:-1]
