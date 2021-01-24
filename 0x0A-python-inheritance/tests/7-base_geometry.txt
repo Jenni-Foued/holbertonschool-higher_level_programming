@@ -1,0 +1,45 @@
+================================
+Module 'Base geometry'
+----------------------------
+Importing the function from the module:
+    >>> Basegeo = __import__("7-base_geometry").BaseGeometry
+
+
+Test module docstring:
+    >>> m = __import__("7-base_geometry").__doc__
+    >>> len(m) > 1
+    True
+
+Test class docstring:
+    >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(c) > 1
+    True
+
+Test methods docstring:
+	>>> area = __import__("7-base_geometry").BaseGeometry.area.__doc__
+	>>> len(area) > 1
+	True
+	>>> int_val = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+    >>> len(int_val) > 1
+    True
+
+Test area Exception:
+	>>> b = Basegeo()
+	>>> b.area()
+	Traceback (most recent call last):
+	 ...
+	Exception: area() is not implemented
+
+Test integer <= 0:
+    >>> b.integer_validator("Wrong!", -33)
+    Traceback (most recent call last):
+    ...
+    ValueError: Wrong! must be greater than 0
+
+Test no arguments to integer_validator:
+	>>> b.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test passing valide value to integer_validator:
+    >>> b.integer_validator("Right!", 1)
