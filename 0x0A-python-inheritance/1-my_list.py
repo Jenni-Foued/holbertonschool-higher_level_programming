@@ -4,9 +4,13 @@ Defines  Mylist class
 """
 
 
-class MyList(list):
-    """list subclass"""
+class Mylist(list):
+    """
+    list subclass
+    """
 
     def print_sorted(self):
-        """prints the list sorted (ascending sort)"""
+        """
+        prints the list sorted (ascending sort)
+        """
         print(sorted(self))
