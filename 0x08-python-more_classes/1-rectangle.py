@@ -5,11 +5,22 @@
 class Rectangle:
     """Class Rectangle
     Attributes:
-        __width (int): width of a side of the Rectangle"""
+        __width (int): width of the Rectangle
+        __height (int): height of the Rectangle
+    """
+
+    def __init__(self, width=0, height=0):
+        """Initializes Rectangle's width and height
+        Args:
+            width (int): width of the Rectangle
+            height (int): height of the Rectangle"""
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
-        return self.width
+        """getter of __width"""
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -25,7 +36,8 @@ class Rectangle:
 
     @property
     def height(self):
-        return self.height
+        """getter of __height"""
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -37,12 +49,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__width = value
-
-    def __init__(self, width=0, height=0):
-        """Initializes Rectangle's width and height
-        Args:
-            width (int): width of the Rectangle
-            height (int): height of the Rectangle"""
-        self.width = width
-        self.height = height
+        self.__height = value
