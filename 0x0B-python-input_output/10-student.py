@@ -13,7 +13,8 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """retrieves a dictionary representation of a Student instance with filter"""
+        """retrieves a dictionary representation of a Student instance
+         with filter"""
         res = {}
         if attrs is not None:
             for a in attrs:
