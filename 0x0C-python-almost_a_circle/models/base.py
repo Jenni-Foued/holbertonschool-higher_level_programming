@@ -22,12 +22,12 @@ class Base:
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of a list of dictionaries"""
         if list_dictionaries is None or list_dictionaries == []:
-            return ""
+            list_dictionaries = []
         return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
         """returns the list of the JSON string representation json_string"""
         if json_string is None or len(json_string) == 0:
-            return "[]"
+            return []
         return json.loads(json_string)
