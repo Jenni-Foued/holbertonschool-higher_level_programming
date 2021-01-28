@@ -34,7 +34,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """assigns a key/value argument to attributes"""
-        if  args and len(args):
+        if args and len(args):
             for i, elm in enumerate(args):
                 if i == 0:
                     self.id = elm
