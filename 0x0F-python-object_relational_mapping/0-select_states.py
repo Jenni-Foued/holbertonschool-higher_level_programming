@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
-A python script that lists all states from the database hbtn_0e_0_usa
+This module contains one function print_states()
 """
 
 from sys import argv
 import MySQLdb
 
-if __name__ == "__main__":
+
+def print_states():
+    """
+    Print all rows in Table states
+    """
     conn = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                            passwd=argv[2], db=argv[3], charset="utf8")
     cur = conn.cursor()
@@ -16,3 +20,6 @@ if __name__ == "__main__":
         print(row)
     cur.close()
     conn.close()
+
+if __name__ == "__main__":
+    print_states()
