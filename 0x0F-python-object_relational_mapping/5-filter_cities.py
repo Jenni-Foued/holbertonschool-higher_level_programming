@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-A python script that takes in an argument and displays all values
-in the states table of hbtn_0e_0_usa where name matches the argument
+A python script that takes in the name of a state as an argument and
+lists all cities of that state
 (This script is safe from MySQL injections)
 """
 
