@@ -7,7 +7,7 @@ and displays the body of the response
 if __name__ == "__main__":
     import requests
     from sys import argv
-    email = argv[2]
-    adress = argv[1]
-    r = requests.post(adress, data={'email': email})
+    Data = {'email': argv[2]}
+    url = argv[1]
+    r = requests.post(url, data=Data)
     print(r.text)
