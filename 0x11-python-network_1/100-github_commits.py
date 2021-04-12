@@ -9,5 +9,8 @@ if __name__ == "__main__":
     r = requests.get("https://api.github.com/repos/{}/{}/commits"
                      .format(argv[2], argv[1]))
     r_dict = r.json()
-    for commit in r_dict[:10]:
-        print("{}: {}".format(commit.get('sha'), commit.get('author')))
+    try:
+        for commit in r_dict[:10]:
+            print("{}: {}".format(commit.get('sha'), commit.get('author')))
+    except Exception:
+        pass
